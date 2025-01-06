@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ... */
+@layer base {
+	:root {
+		--background: #F9FAFB; /** Light Gray */
+		--foreground: #111827; /** Dark Gray */
+		--primary: #1E40AF; /** Deep Blue */
+		--secondary: #3B82F6; /** Sky Blue */
+		--accent: #10B981; /** Green */
+	}
+}
+@layer base {
+
+	body {
+		@apply  bg-background text-foreground leading-normal
+	}
+
+	h1{
+		@apply text-4xl
+	}
+	h2{
+		@apply text-2xl
+	}
+	h3{
+		@apply text-[18px];
+	}
+}
