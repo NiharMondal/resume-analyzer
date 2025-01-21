@@ -10,9 +10,11 @@ export default function Navbar() {
 					<p>Logo</p>
 				</Link>
 
-				<Button size={"lg"}>
-					<LogIn /> Login
-				</Button>
+				<Link to={"/login"}>
+					<Button size={"lg"} variant={"outline"}>
+						<LogIn /> Login
+					</Button>
+				</Link>
 			</nav>
 		</header>
 	);

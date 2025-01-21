@@ -5,7 +5,7 @@ export default function RootLayout() {
 	return (
 		<main>
 			<Navbar />
-			<div className="container mx-auto py-5">
+			<div className="w-full container mx-auto py-5">
 				<Outlet />
 			</div>
 		</main>

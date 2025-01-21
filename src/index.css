@@ -110,19 +110,24 @@
 
 @layer base {
 	* {
-		@apply box-border;
+		@apply box-border border-border;
 	}
 
 	body {
 		@apply bg-background text-foreground;
 	}
+
+	h1{
+		@apply text-3xl font-semibold md:text-4xl md:font-bold
+	}
+	h2{
+		@apply text-2xl font-semibold md:text-3xl md:font-bold
+	}
+	h3{
+		@apply text-xl font-semibold md:text-2xl
+	}
+	h5{
+		@apply text-base font-medium md:text-xl
+	}
 }
 
-@layer base {
-  * {
-    @apply border-border;
-	}
-  body {
-    @apply bg-background text-foreground;
-	}
-}
