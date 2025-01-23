@@ -1,45 +1,21 @@
-import { Link, NavLink } from "react-router";
+import { LogIn } from "lucide-react";
+import { Link } from "react-router";
 import { Button } from "../ui/button";
-import { navlinks } from "@/helpers/navbarItems";
-import MobileNav from "../ui/mobile-nav";
 
 export default function Navbar() {
 	return (
-		<header className="container mx-auto py-2 border-b">
-			{/** desktop  */}
-			<DesktopView />
+		<header className="container mx-auto py-2 h-[80px] border-b">
+			<nav className="h-full flex items-center justify-between">
+				<Link to={"/"}>
+					<p>Logo</p>
+				</Link>
 
-			{/** mobile */}
-			<MobileNav />
+				<Link to={"/login"}>
+					<Button size={"lg"} variant={"outline"}>
+						<LogIn /> Login
+					</Button>
+				</Link>
+			</nav>
 		</header>
 	);
 }
-
-// for desktop view
-const DesktopView = () => {
-	return (
-		<nav className="hidden md:flex items-center justify-between">
-			<Link to={"/"}>
-				<img src="/logo.svg" alt="Logo" className="w-[80px] " />
-			</Link>
-
-			<ul className="flex items-center gap-x-8">
-				{navlinks.map((nav) => (
-					<li key={nav.name}>
-						<NavLink
-							to={nav.path}
-							className={({ isActive }) =>
-								isActive
-									? "text-primary font-medium capitalize"
-									: "capitalize"
-							}
-						>
-							{nav.name}
-						</NavLink>
-					</li>
-				))}
-			</ul>
-			<Button variant={"outline"}>Login</Button>
-		</nav>
-	);
-};
