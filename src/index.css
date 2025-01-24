@@ -118,16 +118,31 @@
 	}
 
 	h1{
-		@apply text-3xl font-semibold md:text-4xl md:font-bold
+		@apply text-3xl font-semibold md:text-5xl md:font-bold
 	}
 	h2{
-		@apply text-2xl font-semibold md:text-3xl md:font-bold
+		@apply text-2xl font-semibold md:text-4xl md:font-bold
 	}
 	h3{
-		@apply text-xl font-semibold md:text-2xl
+		@apply text-xl font-semibold md:text-3xl
 	}
 	h5{
 		@apply text-base font-medium md:text-xl
 	}
 }
 
+@layer components{
+	.custom_jump_animation{
+		animation: jump 1s ease-in-out infinite alternate-reverse;
+		transition: all 1s;
+	}
+
+	@keyframes jump {
+		from {
+			transform: translateY(0);
+		}
+		to{
+			transform: translateY(-10px);
+		}
+	}
+}
