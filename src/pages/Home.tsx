@@ -1,10 +1,5 @@
-import {
-	FilePlus,
-	CpuIcon,
-	CircleCheck,
-	ArrowRight,
-	Upload,
-} from "lucide-react";
+import DZone from "@/components/Dropzone";
+import { FilePlus, CpuIcon, CircleCheck, ArrowRight } from "lucide-react";
 
 export default function Home() {
 	return (
@@ -36,11 +31,7 @@ export default function Home() {
 				</li>
 			</ul>
 
-			<div className="mt-16 border border-muted-foreground/70 border-dashed border-spacing-80 p-10 hover:border-muted-foreground max-w-2xl mx-auto rounded-md">
-				<div className="flex items-center justify-center">
-					<Upload className="size-12 p-3 rounded-full custom_jump_animation" />
-				</div>
-			</div>
+			<DZone />
 		</div>
 	);
 }
